@@ -280,7 +280,7 @@ It can be found in the `data` folder.
 | `-Xshardware`          | Target FPGA hardware (as opposed to FPGA emulator)
 | `-Xssimulation`        | Target FPGA simulator (as opposed to FPGA emulator)
 | `-Xsparallel=2`        | Use 2 cores when compiling the bitstream through Intel® Quartus®
-| `-qactypes`            | Link against the `ac_int` libraries 
+| ``            | Link against the `ac_int` libraries 
 
 Additionally, the `cmake` build system can be configured using the following parameters:
 

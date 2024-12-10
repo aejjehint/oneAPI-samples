@@ -95,7 +95,7 @@ To use an `ac_fixed` type in your code, include the following header:
 #include <sycl/ext/intel/ac_types/ac_fixed.hpp>
 ```
 
-> **Important**: You must pass the  `-qactypes` option to the `icpx` command on Linux or the `/Qactypes` option to the `icx-cl` command on Windows when building your SYCL program in order to include `ac_types` header files on the include path and link against the AC type libraries. In this tutorial, the options are passed through the `src/CMakeLists.txt` file.
+> **Important**: You must pass the  `` option to the `icpx` command on Linux or the `/Qactypes` option to the `icx-cl` command on Windows when building your SYCL program in order to include `ac_types` header files on the include path and link against the AC type libraries. In this tutorial, the options are passed through the `src/CMakeLists.txt` file.
 
 ### Recommended Method for Constructing `ac_fixed` Numbers
 
@@ -141,7 +141,7 @@ When you use the `ac_fixed` library, keep the following points in mind:
   
   - **Floating point vs. Fixed point**: The host program for this tutorial shows the accuracy differences between the result provided by floating point math library and the result provided by the `ac_fixed` math library functions, where the `float` version generates a more accurate result than the smaller-sized `ac_fixed` version.
 
-    >**Note**: The program is compiled with `fp-model` set to "precise" so that the accuracies of the floating-point math functions conform to the IEEE standard.
+    >**Note**: The program is compiled with `ffp-model` set to "precise" so that the accuracies of the floating-point math functions conform to the IEEE standard.
 
 
   - **Emulation vs. FPGA Hardware for fixed point math operations**: Due to the differences in the internal math implementations, the results from `ac_fixed` math functions in emulation and FPGA hardware might not always be bit-accurate. This tutorial shows how to build and run the sample for emulation and FPGA hardware so you can observe the difference.

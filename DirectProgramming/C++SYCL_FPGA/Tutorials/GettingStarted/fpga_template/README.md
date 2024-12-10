@@ -174,7 +174,7 @@ This design uses CMake to generate a build script for GNU/make.
    ```bash
    build $> make report
    [ 33%] To compile manually:
-   /[ ... ]/linux64/bin/icpx -I../../../../include -fintelfpga    -Wall -qactypes -DFPGA_HARDWARE -c ../src/fpga_template.cpp -o CMakeFiles/report.dir/src/ fpga_template.cpp.o
+   /[ ... ]/linux64/bin/icpx -I../../../../include -fintelfpga    -Wall  -DFPGA_HARDWARE -c ../src/fpga_template.cpp -o CMakeFiles/report.dir/src/ fpga_template.cpp.o
 
    To link manually:
    /[ ... ]/linux64/bin/icpx -fintelfpga -Xshardware  -Xstarget=Agilex7 -fsycl-link=early -o fpga_template.report CMakeFiles/report.dir/src/  fpga_template.cpp.o
@@ -254,7 +254,7 @@ This design uses CMake to generate a build script for  `nmake`.
    build> nmake report
 
    [ 33%] To compile manually:
-   C:/Program Files (x86)/Intel/oneAPI/compiler/latest/windows/bin/icx-cl.exe -I../../../../include   -fintelfpga -Wall /EHsc -Qactypes -DFPGA_HARDWARE -c ../src/fpga_template.cpp -o  CMakeFiles/report.dir/src/fpga_template.cpp.obj
+   C:/Program Files (x86)/Intel/oneAPI/compiler/latest/windows/bin/icx-cl.exe -I../../../../include   -fintelfpga -Wall /EHsc  -DFPGA_HARDWARE -c ../src/fpga_template.cpp -o  CMakeFiles/report.dir/src/fpga_template.cpp.obj
 
    To link manually:
    C:/Program Files (x86)/Intel/oneAPI/compiler/latest/windows/bin/icx-cl.exe -fintelfpga   -Xshardware -Xstarget=Agilex7 -fsycl-link=early -o fpga_template.report.exe   CMakeFiles/report.dir/src/fpga_template.cpp.obj
